@@ -1,0 +1,82 @@
+{
+  "name": "next-hook",
+  "version": "0.0.1",
+  "description": "A high-quality and reliable React Hooks library.",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/hooks.js",
+  "exports": {
+    ".": {
+      "import": "./dist/hooks.js",
+      "require": "./dist/hooks.umd.js"
+    }
+  },
+  "author": "lyove",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "tsc && vite build",
+    "serve": "vite preview",
+    "prepare": "husky install",
+    "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore",
+    "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
+    "lint": "yarn lint:format && yarn lint:fix ",
+    "type-check": "tsc"
+  },
+  "homepage": "https://github.com/lyove/next-hook#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lyove/next-hook.git"
+  },
+  "keywords": [
+    "react",
+    "react-hooks",
+    "next-hook",
+    "next-hook-library"
+  ],
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@lyove/utils": "^0.0.1",
+    "@types/node": "^18.16.0",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.10.2",
+    "@typescript-eslint/parser": "^5.10.2",
+    "@vitejs/plugin-react": "^3.1.0",
+    "eslint": "^8.8.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "husky": "8.0.1",
+    "lint-staged": "13.0.3",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.5",
+    "vite": "^4.3.0",
+    "vite-plugin-static-copy": "^0.14.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css,scss,less}": [
+      "prettier --ignore-path ./.prettierignore --write "
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "eslint"
+    ]
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
