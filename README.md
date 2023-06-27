@@ -1,4 +1,4 @@
-# 📦 next-hooks
+# 📦 next-hook
 
 A high-quality and reliable React Hooks library.
 
@@ -7,7 +7,7 @@ A high-quality and reliable React Hooks library.
 
 **useMountEffect**
 ```js
-import { useMountEffect } from "next-hooks";
+import { useMountEffect } from "next-hook";
 
 useMountEffect(() => {
   console.log("app mounted");
@@ -16,7 +16,7 @@ useMountEffect(() => {
 
 **useUpdateEffect**
 ```js
-import { useUpdateEffect } from "next-hooks";
+import { useUpdateEffect } from "next-hook";
 
 const [value, setValue] = useState(0);
 
@@ -27,7 +27,7 @@ useUpdateEffect(() => {
 
 **useUnmountEffect**
 ```js
-import { useUnmountEffect } from "next-hooks";
+import { useUnmountEffect } from "next-hook";
 
 useUnmountEffect(() => {
   console.log("app unmounted");
@@ -36,7 +36,7 @@ useUnmountEffect(() => {
 
 **usePrevious**
 ```js
-import { usePrevious } from "next-hooks";
+import { usePrevious } from "next-hook";
 
 const [value, setValue] = useState(0);
 const prevValue = usePrevious(value);
@@ -56,7 +56,7 @@ return (
 
 **useCounter**
 ```js
-import { useCounter } from "next-hooks";
+import { useCounter } from "next-hook";
 
 const { count, increment, decrement, reset } = useCounter(0);
 
@@ -75,7 +75,7 @@ return (
 
 **useDebounce**
 ```js
-import { useDebounce } from "next-hooks";
+import { useDebounce } from "next-hook";
 
 const [inputValue, debouncedValue, setInputValue] = useDebounce("initValue", 600);
 
@@ -92,7 +92,7 @@ return (
 
 **useTimeout**
 ```js
-import { useTimeout } from "next-hooks";
+import { useTimeout } from "next-hook";
 
 const [clearTimeout] = useTimeout(() => {
   // 1 second log
@@ -102,7 +102,7 @@ const [clearTimeout] = useTimeout(() => {
 
 **useInterval**
 ```js
-import { useInterval } from "next-hooks";
+import { useInterval } from "next-hook";
 
 const [clearInterval] = useInterval(() => {
   // 1 second log
@@ -112,7 +112,7 @@ const [clearInterval] = useInterval(() => {
 
 **useStorage/useLocalStorage/useSessionStorage**
 ```js
-import { useStorage, useLocalStorage, useSessionStorage } from "next-hooks";
+import { useStorage, useLocalStorage, useSessionStorage } from "next-hook";
 
   const [store, setStore] = useStorage(0, "store");
   const [local, setLocal] = useLocalStorage(0, "local");
@@ -136,7 +136,7 @@ import { useStorage, useLocalStorage, useSessionStorage } from "next-hooks";
 **useEventListener**
 ```js
 import { useRef } from "react";
-import { useMountEffect, useUnmountEffect, useEventListener } from "next-hooks";
+import { useMountEffect, useUnmountEffect, useEventListener } from "next-hook";
 
 const elementRef = useRef();
 
@@ -165,7 +165,7 @@ return (
 
 **useResizeListener**
 ```js
-import { useMountEffect, useUnmountEffect, useResizeListener } from "next-hooks";
+import { useMountEffect, useUnmountEffect, useResizeListener } from "next-hook";
 
 useMountEffect(() => {
   bindWindowResizeListener();
